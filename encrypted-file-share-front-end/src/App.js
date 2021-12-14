@@ -2,23 +2,32 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import './App.css';
-import FileUpload from './file-upload';
-import Navbar from "./navbar";
-import Home from "./home";
+import FileUpload from './pages/file-upload';
+import Navbar from "./components/navbar.component";
+import Home from "./pages/home";
+import Login from "./pages/login";
+
 
 function App() {
-  return (
-    <BrowserRouter>
+  /*return (
+    <div>
+      <BrowserRouter>
     <Navbar />
     <Switch>
       <Route exact path="/">
         <Home />
       </Route>
-      <Route path="/upload">
+      <Route path="/uploadfiles">
         <FileUpload />
       </Route>
     </Switch>
     </BrowserRouter>
+    </div>
+  );*/
+  return (
+    <div>
+      <Login/>
+    </div>
   );
 }
 
