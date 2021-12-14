@@ -6,7 +6,7 @@ function Navbar(){
     return(
     <nav>
         <NavLink to="/" id="app-header">Home</NavLink>
-        <NavLink to="/upload" id="file-upload-link">Upload Files</NavLink>
+        <NavLink to="/uploadfiles" id="file-upload-link">Upload Files</NavLink>
     </nav>
     );
 }

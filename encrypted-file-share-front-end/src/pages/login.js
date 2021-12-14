@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router";
 
-class FileUpload extends React.Component{
+class Login extends React.Component{
 
     constructor(props){
         super(props);
@@ -39,13 +39,20 @@ class FileUpload extends React.Component{
             return(<Redirect to="/profile"></Redirect>);
         }
         return(
-            <form onSubmit={this.handleSubmit}>
+            <form method="POST" action="http://localhost:8080">
                 <label>
-                    File Upload
+                    Username
+                    <input type="text" value={this.state.username} onChange={this.handleChange}/>
                 </label>
+                <br/>
+                <label>
+                    Password
+                    <input type="password" value={this.state.password} onChange={this.handleChange}/>
+                </label>
+                <button type="submit">Submit</button>
             </form>
         );
     }
 }
 
-export default FileUpload;
+export default Login;
